@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* 混合器重点:
+   1.其实混合器可以理解为一个函数。
+   (1)定义混合器时，把定义混合器当作定义函数，只不过函数中的function用@mixin代替;
+   (2)调用混合器时，可以把其理解为函数的调用，在"混合器名"前面加了一个@include.
+   2.混合器在传递参数时，可以参照函数中的参数解构进行理解。只不过，不能用对象语法进行传递，但是可以给形参指定默认值，并且可以实现实参形参一一对应。
+*/
+html,
+body,
+div {
+  margin: 0;
+  padding: 0; }
+
+.parent {
+  width: 230px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap; }
+  .parent .d1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin-top: 10px;
+    border-radius: 20%; }
+  .parent .d2 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin-top: 10px;
+    border-radius: 20%; }
+  .parent .d3 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin-top: 10px;
+    border-radius: 20%; }
+  .parent .d4 {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    margin-top: 10px;
+    border-radius: 20%; }

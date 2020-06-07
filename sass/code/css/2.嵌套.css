@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* 嵌套主要有三种常用的:
+(1)父子之间嵌套--使用{}
+(2)同一个元素上的多类选择器--使用&.class2{}
+(3)同一级元素上的伪类选择器--使用&:hover{}
+*/
+html,
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.d1 {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: relative; }
+  .d1 .d2 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px; }
+    .d1 .d2:hover {
+      background: yellow; }
+    .d1 .d2.d3 {
+      border: 3px solid yellow; }

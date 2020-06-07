@@ -1,0 +1,14 @@
+// 注意事项2:变量定义在{}规则块外边，整个样式文件中都可以使用
+$background: red;
+$width: 100px;
+$jd_red: blue;
+$jd_red: yellow !default;
+// 注意事项3:!default规则表示，如果前面已经定义了$js_red，就用之前已经定义好的样式blue，如果之前没有定义就用现在定义好的yellow；
+.d1 {
+  //注意事项1: 声明变量时，变量值可以应用其它的变量;如果定义在{}规则块内部，只能在当前规则块中使用
+  $height: $width;
+  width: $width;
+  height: $height;
+  background: $background;
+  border: 1px solid $jd_red;
+}
