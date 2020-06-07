@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        /* width: 100%;
+        height: 100%; */
+      }
+      .clearfix {
+        border: 2px solid red;
+      }
+      .d1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+        float: left;
+      }
+      /* 既可以解决高度坍塌，又可以解决float高度坍塌 */
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="d1"></div>
+    </div>
+  </body>
+</html>

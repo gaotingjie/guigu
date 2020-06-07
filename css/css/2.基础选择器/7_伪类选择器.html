@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* 元素未访问前 */
+      a:link {
+        background: red;
+      }
+      /* 元素访问后，可以忽略 */
+      a:visited {
+        background: blue;
+      }
+      /* 元素获取焦点时候 */
+      input:focus {
+        font-size: 20px;
+        font-style: italic;
+      }
+      a:hover {
+        background: yellow;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://www.runoob.com/cssref/css-reference.html#background"
+          >首页</a
+        >
+      </li>
+      <li><a href="">学校简介</a></li>
+      <li><a href="">图书馆</a></li>
+      <li><a href="">机构简介</a></li>
+    </ul>
+    <input type="text" name="" id="" />点击这里
+  </body>
+</html>

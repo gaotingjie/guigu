@@ -1,0 +1,71 @@
+<!-- 
+除了默认文档流之外，定位共包含三种：
+1.相对定位
+特点:
+(1)不脱离默认文档流;
+(2)相对于自身原来位置进行位置偏移;
+2.绝对定位
+特点:
+(1)脱离默认文档流;
+(2)如果祖父级元素有相对定位或者绝对定位的元素，则该元素相对于父级元素进行位置偏移
+3.固定定位
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #d1,
+      #d2,
+      #d3,
+      #d4 {
+        border: 1px solid black;
+      }
+      #d1 {
+        width: 150px;
+        height: 150px;
+        background: black;
+        position: relative;
+        left: 30px; /*d1相对定位，相对于自己原来的位置偏移*/
+        top: 30px;
+      }
+      #d2 {
+        width: 120px;
+        height: 120px;
+        background: blue;
+        position: absolute;
+        top: 30px; /*d2相对于d1绝对定位进行偏移。*/
+        left: 20px;
+      }
+      #d3 {
+        width: 70px;
+        height: 70px;
+        background: coral;
+        position: absolute;
+        top: 30px; /*d3相对于d2绝对定位进行偏移。*/
+        left: 20px;
+      }
+      #d4 {
+        width: 40px;
+        height: 40px;
+        background: darkblue;
+        position: absolute; /*因为d4组级元素没有定位元素，所以绝对定位是相对于Body进行偏移*/
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d4"></div>
+    <div id="d1">
+      <div id="d2">
+        <div id="d3"></div>
+      </div>
+    </div>
+    <br />
+  </body>
+</html>

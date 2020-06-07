@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* 定义1px下划线移动动画效果 */
+      @keyframes BotLine {
+        0% {
+          border-bottom-width: 3px;
+          border-bottom-style: hidden;
+          border-bottom-color: cornsilk;
+        }
+        100% {
+          border-bottom-width: 3px;
+          border-bottom-style: solid;
+          border-bottom-color: red;
+        }
+      }
+      #d2 {
+        width: 50px;
+        height: 40px;
+        background: blueviolet;
+        text-align: center;
+        line-height: 40px;
+      }
+      #d2:hover {
+        animation: BotLine 0.1s linear;
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+      <div id="d2">首页</div>
+    </div>
+  </body>
+</html>

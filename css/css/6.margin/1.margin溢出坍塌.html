@@ -1,0 +1,42 @@
+<!-- 外边距高度坍塌有两种情况:
+(1)两个平级块级元素，当上面元素的下外边距为30px；下面的块级元素的上外边距为20px时候，大者为最终值。
+(2)父子关系的两个块级元素:当给子元素设定margin时，父元素会跟着一起移动。解决方法为在第一个子元素的最前面添加一个平级<table></table>
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .d1 {
+        width: 300px;
+        height: 300px;
+        background: red;
+      }
+      /* 在d1内部插入一个子元素，内容为空，当显示为table时，不占空间，可以用来解决外边距坍塌的作用 */
+      .d1::before {
+        content: "";
+        display: table;
+      }
+      .d2 {
+        margin: 20px;
+        width: 150px;
+        height: 150px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      <div class="d2"></div>
+    </div>
+  </body>
+</html>

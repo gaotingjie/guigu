@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* notes：字体大小最小值为12px */
+      html {
+        font-size: 12px;
+      }
+      /* 情况1:当html没有设定font-size大小时，当前元素长度=浏览器默认font-size=16px * 当前元素rem前面的数值，值为160px; */
+      /* 情况2：当Html设定了font-zise大小时，当前元素长度=html的font-size * 当前元素rem前面的数值 ,值为120px*/
+      #d1 {
+        width: 10rem;
+        height: 10rem;
+        background-color: green;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1"></div>
+  </body>
+</html>

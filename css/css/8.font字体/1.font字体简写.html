@@ -1,0 +1,26 @@
+<!-- 
+(1)简写方式:font-style | font-variant | font-weight | font-size /line-height | font-family
+注意:(1)font在使用简写时，最少要指定size 和family.
+     (2)font-size/linr-height要一起写，行高如果为2，表示行高为字体大小的2倍。
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div p {
+        font: italic small-caps bold 12px/1.5em arial, verdana;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        我叫郜挺杰
+      </p>
+    </div>
+  </body>
+</html>

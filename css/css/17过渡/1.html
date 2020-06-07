@@ -1,0 +1,40 @@
+<!-- 过度的对象指的是某一个元素的一种样式属性或者所有样式属性，由一种css样式转换为另一种css样式的过程。注重的是过程。 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #d1 {
+        width: 50px;
+        height: 50px;
+        background: red;
+      }
+      #d2 {
+        width: 50px;
+        height: 50px;
+        background: blue;
+      }
+      #d1:hover {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /*表示当d1:hover时，d1由原来的属性样式通过2s过度，变为:hover的对应样式，其中参与过度的元素是所有元素。 */
+        transition: all 2s linear;
+      }
+      #d2:hover {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* 表示当d2:hover时，d2由原来的属性样式通过2s过度，变为:hover的对应样式，其中参与过度的元素只有border-radius，其余元素不参与过度，直接变化 */
+        transition: border-radius 2s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+  </body>
+</html>

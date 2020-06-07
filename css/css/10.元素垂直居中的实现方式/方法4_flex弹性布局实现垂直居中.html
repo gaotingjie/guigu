@@ -1,0 +1,35 @@
+<!-- 实现元素在父元素内部垂直居中显示，方法1：
+步骤:
+(1)html,body内外边距清零，宽高为页面的100%;
+(2)定义div，使用Margin:0 auto实现元素水平居中;
+(3)使用relative相对定位，然后top先定义50%，margin-top定义为:-宽度/2;
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 150px;
+        height: 150px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

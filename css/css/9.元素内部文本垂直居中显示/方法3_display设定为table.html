@@ -1,0 +1,32 @@
+<!--
+方法3：将当前元素放在一个父级元素中，并把该父级元素设定display：table；把子元素的dispaly:table-cell
+使用场景:适用于多行文本居中显示但是不支持ie6。 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div.parent {
+        height: 300px;
+        width: 300px;
+        background: red;
+        display: table; /*给父元素显示方式为table*/
+      }
+      div.d1 {
+        display: table-cell; /*显示为单元格*/
+        vertical-align: middle; /*有垂直居中的属性*/
+        text-align: center; /*文本水平居中*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="d1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, magni
+      </div>
+    </div>
+  </body>
+</html>
